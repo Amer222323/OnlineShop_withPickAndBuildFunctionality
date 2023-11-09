@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Unsere Internetseite ist ein Fahrradverkaufsportal, das eine einzigartige Funktion namens 'Pick and Build' bietet. Kunden können ihre eigenen Fahrräder individuell gestalten, indem sie verschiedene Komponenten wie Rahmen, Räder, Sattel und Sitz auswählen. "
+    />
+    <meta
+      name="keywords"
+      content="individuelle Fahrradgestaltung, Pick and Build, Fahrradkonfigurator, Fahrradzusammenstellung, Fahrradkauf"
+    />
+    <meta
+      property="og:title"
+      content="Fahrradverkauf und individuelle Fahrradgestaltung"
+    />
+    <meta
+      property="og:description"
+      content="Erleben Sie den perfekten Fahrradkauf und gestalten Sie Ihr individuelles Fahrrad mit unserem einzigartigen 'Pick and Build' Tool. Wählen Sie aus einer Vielzahl von Komponenten und personalisieren Sie Ihr Fahrrad nach Ihren Vorlieben und Bedürfnissen."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="de_DE" />
+    <meta
+      property="og:image"
+      content="https://cdn.pixabay.com/photo/2013/03/19/18/23/mountain-biking-95032_1280.jpg"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="script" href="pick-build.js" />
+    <title>Pick and Build</title>
+  </head>
+  <body>
+    <main class="pick_main">
+      <div class="Pick_build">
+        <div id="title">
+          <button id="züruck_btn">Züruck</button>
+          <script>
+            let zurueck_btn = document.getElementById("züruck_btn");
+            zurueck_btn.addEventListener("click", function () {
+              window.location.href = "index.html";
+            });
+          </script>
+          <span id="name_tit">Fahrad</span>
+        </div>
+        <div id="erg">
+          <img
+            src="assets/images/bikes/rahmen/rahmen.png"
+            alt="Rahmen"
+            id="rahmen"
+          />
+          <img
+            src="assets/images/bikes/cover/cover.png"
+            alt="Cover"
+            id="cover"
+          />
+          <img
+            src="assets/images/bikes/reder/reder.png"
+            alt="Reder"
+            id="reder"
+          />
+          <img src="assets/images/bikes/sitz/sitz.png" alt="Sitz" id="sitz" />
+        </div>
+        <div id="teile">
+          <div id="teile_buttons">
+            <button class="item_btn" id="rahmen_btn" title="Rahmen Button">
+              <span>Rhamen</span>
+            </button>
+            <button class="item_btn" id="sattle_btn" title="Sattle Button">
+              <span>Sattle</span>
+            </button>
+            <button class="item_btn" id="räder_btn" title="Räder Button">
+              <span>Räder</span>
+            </button>
+            <button class="item_btn" id="sitz_btn" title="sitz Button">
+              <span>sitzer</span>
+            </button>
+          </div>
+          <div id="imageContainer"></div>
+
+          <div class="items_container" id="items" onsubmit="addItems()">
+            <button id="previous_btn">previous</button>
+            <button class="style_btn" id="btn_chang">fetig stellen</button>
+            <button class="style_btn" id="neu_beginnen">neu Anfangen</button>
+            <button id="next_btn">next</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="assets/js/pick-build.js"></script>
+</html>
